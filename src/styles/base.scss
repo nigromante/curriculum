@@ -1,34 +1,103 @@
+
+$body-bg : #000;
+$body-fg : #fff;
+
+$header-bg : #222;
+$header-fg : goldenrod;
+$header-in : #000;
+
+$footer-bg : #222;
+$footer-fg : goldenrod ;
+$footer-in : #000;
+
+$main-bg : silver;
+$main-fg : #333;
+
+$section_odd-bg : goldenrod;
+$section_odd-fg : #333;
+$section_odd-in :  gold ;
+
+$section_even-bg : silver;
+$section_even-fg : #444;
+$section_even-in : #efefef;
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    background-color: red;
+    background-color: $body-bg;
+    color: $body-fg;
+    font-size: 16px;
 }
 
-.container {
-    width: 1440px;
-    margin: 0 auto ;
-}
-
-
-section .container{
-    padding: 2rem;
+h1, h2, h3, h4 {
+    font-weight: bold;
 }
 
 
-section.seccion_projects {
-    background-color: aquamarine;
+h4 {
+    font-size: 1.25em;
 }
-section.seccion_projects .container {
-    background-color: aqua;
+h3 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.75em;
+}
+h1 {
+    font-size: 2em;
 }
 
-section.seccion_about {
-    background-color: gold;
+
+header {
+    background-color: $header-bg;
+    color: $header-fg;
+    .title {
+        background-color: $header-in;
+    }
 }
-section.seccion_about .container {
-    background-color: goldenrod;
+
+footer {
+    background-color: $footer-bg;
+    color: $footer-fg;
+    .title {
+        background-color: $footer-in;
+    }
+}
+
+section.section-odd {
+    background-color: $section_odd-bg;
+    color: $section_odd-fg;
+    .title {
+        background-color: $section_odd-in;
+    }
+    .body {
+        background-color: $section_odd-fg;
+        color: $section_odd-bg;
+    }
+    
+}
+
+section.section-even {
+    background-color: $section_even-bg;
+    color: $section_even-fg;
+    .title {
+        background-color: $section_even-in;
+    }
+    .body {
+        background-color: $section_even-fg;
+        color: $section_even-bg;
+    }
+
+}
+
+section   {
+    .body {
+        min-height: 30px;
+    }
 }
